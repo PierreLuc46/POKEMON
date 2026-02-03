@@ -1,7 +1,7 @@
 import './CardPokemon.scss';
 import { useState } from 'react';
 import iconAdd from '../assets/add.png'; 
-
+import { Link } from "react-router-dom";
 
 export function CardPokemon({ data, pokedex, setPokedex }) {
   const [flip, setFlip] = useState(false);
@@ -36,7 +36,9 @@ export function CardPokemon({ data, pokedex, setPokedex }) {
           </figcaption>
         </figure>
         <div className="cardBack">
-          <a href="#">Voir plus</a>
+          <Link to={`/pokemon/${data.id}`} className="btn-details">
+            Voir plus
+          </Link>
         </div>
       </div>
     </article>
