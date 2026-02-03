@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import pokeball from '../assets/9901.gif';
+import pokeball from '../assets/pokeball.png';
 import './Sidebar.scss';
 
 function Sidebar({ pokedex }) {
@@ -16,7 +16,7 @@ function Sidebar({ pokedex }) {
       </button>
       
       <h2>
-        <img src={pokeball} alt="pokeball" style={{ width: "10px", height: "10px" }} />
+        <img src={pokeball} alt="pokeball" />
         <p>Pokédex ({pokedex.length})</p>
       </h2>
   
