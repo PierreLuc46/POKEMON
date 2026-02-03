@@ -18,13 +18,13 @@ function Home() {
       .catch((err) => { console.log(err.message); setIsLoading(false); });
   }, []);
 
- 
+
 
   return (
 
 
     <div className="lmj-layout-inner">
-      <Sidebar pokedex={pokedex} resetPokedex={resetPokedex} />
+      <Sidebar pokedex={pokedex} resetPokedex={resetPokedex} setPokedex={setPokedex}/>
       {isLoading ? (
         <div className="loading" style={{ textAlign: "center", width: "100%", color: "white" }}>
           <img src={chargement} alt="chargement" style={{ width: "100px", height: "100px" }} />
@@ -33,13 +33,14 @@ function Home() {
       <main>
         <div className="cards-container" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
           {dataPokemon.map((poke, index) => (
-            <CardPokemon 
-                key={index} 
-                data={poke} 
-                pokedex={pokedex} 
-                setPokedex={setPokedex} 
+            <CardPokemon
+              key={index}
+              data={poke}
+              pokedex={pokedex}
+              setPokedex={setPokedex}
             />
           ))}
+          
         </div>
       </main>
     </div>
