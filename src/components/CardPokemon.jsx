@@ -1,3 +1,4 @@
+
 import './CardPokemon.scss';
 import { useState } from 'react';
 import iconAdd from '../assets/add.png'; 
